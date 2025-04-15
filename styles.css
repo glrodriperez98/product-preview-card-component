@@ -1,0 +1,154 @@
+
+:root {
+    /* Colors */
+    --green-500: hsl(158, 36%, 37%);
+    --green-700: hsl(158, 42%, 18%);
+    --black: hsl(212, 21%, 14%);
+    --grey: hsl(228, 12%, 48%);
+    --cream: hsl(30, 38%, 92%);
+    --white: hsl(0, 0%, 100%);
+    --pink: #eb349e;
+    /* Fonts */
+    --font-primary: 'Montserrat', sans-serif;
+    --font-heading: 'Fraunces', serif;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-primary);
+    background-color: var(--cream);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100dvh;
+    padding: 1.5rem;
+
+}
+
+.card {
+    display: flex;
+    flex-direction: row;
+    background-color: var(--white);
+    border-radius: 1rem;
+    overflow: hidden;
+    max-width: 600px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 1.5rem;
+}
+
+.card-image img {
+    display: block;
+    width: 100%;
+    height: 100%;    
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.product-category {
+    letter-spacing: 3px;
+    color: var(--grey);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+}
+
+.card-content h1 {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    line-height: 1.2;
+    color: var(--black)
+}
+
+.product-description {
+    font-size: 0.875rem;
+    color: var(--grey);
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.current-price {
+    font-family: var(--font-heading);
+    font-size: 1.75rem;
+    color: var(--green-500);
+    font-weight: 700;
+}
+
+.old-price {
+    text-decoration: line-through;
+    color: var(--grey)
+}
+
+.checkout-btn {
+    background-color: var(--green-500);
+    color: var(--white);
+    border: none;
+    padding: 0.75rem;
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.checkout-btn:hover {
+    background-color: var(--green-700);
+}
+
+.attribution { 
+    font-size: 11px;
+    text-align: center;
+    
+}
+
+.attribution a { 
+    color: hsl(228, 45%, 44%);
+    text-decoration: none;
+}
+
+.attribution a:hover {
+    color: var(--pink);
+}
+
+@media (max-width: 600px) {
+    .card {
+        flex-direction: column;
+        max-width: 90%;
+    }
+
+    .card-image img {
+        height: auto;
+        border-radius: 1rem 1rem 0 0;
+    }
+
+    .card-content {
+        padding: 1.5rem;
+    }
+
+    .card-content h1 {
+        font-size: 1rem;
+    }
+
+    .current-price {
+        font-size: 1.5rem;
+    }
+}
