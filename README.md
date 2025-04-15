@@ -90,7 +90,7 @@ Frontend Mentor Community - For seeing how others structure their solutions
 
 ## Author
 
-Website - Gabriel L. Rodriguez Perez
+Gabriel L. Rodriguez Perez
 
 Frontend Mentor - @glrodriperez98
 
